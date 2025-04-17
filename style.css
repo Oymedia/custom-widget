@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.search-input {
+    position: relative;
+    flex: 1;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #202020;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input input:focus {
+    border-color: #4a5568;
+}
+
+.search-button {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    bottom: 10px;
+    background-color: #394361;
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.dropdown {
+    /* flex: 1; */
+    width: 20%;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #394361;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+}
+
+.apply-btn {
+    /* flex: 1; */
+    width: 18%;
+    background-color: #394361;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.apply-btn:hover {
+    background-color: #4a5568;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.job-card {
+    /* background-color: white; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+    /* padding: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-left: 1px solid #e2e8f0; */
+}
+
+.job-info {
+    flex: 1;
+    cursor: pointer;
+}
+
+.job-location {
+    color: #0086FF;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.job-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #394361;
+    margin-bottom: 8px;
+}
+
+.job-department {
+    color: #4a5568;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.learn-more-btn {
+    background-color: white;
+    color: #0000AD;
+    border: 1px solid #0000AD;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #0000AD;
+    color: #fff;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 10px 0;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #4a5568;
+}
+
+.error {
+    color: #e53e3e;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .dropdown,
+    .apply-btn {
+        width: 100%;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .learn-more-btn {
+        margin-top: 15px;
+        align-self: flex-end;
+    }
+}
