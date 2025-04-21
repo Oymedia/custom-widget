@@ -64,7 +64,7 @@ body {
     right: 75px;
     top: 50%;
     transform: translate(50%, -50%);
-    background-color: #0000AD;
+    background-color: transparent;
     border-radius: 5px;
     border: none;
     outline: none;
